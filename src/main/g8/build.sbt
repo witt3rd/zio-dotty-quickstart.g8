@@ -19,6 +19,5 @@ lazy val root = project
       ("dev.zio" %% "zio-test-junit"    % zioVersion % Test).cross(CrossVersion.for3Use2_13),
       ("dev.zio" %% "zio-test-magnolia" % zioVersion % Test).cross(CrossVersion.for3Use2_13)
     ),
-    libraryDependencies := libraryDependencies.value.map(_.withDottyCompat(scalaVersion.value)),
     testFrameworks := Seq(new TestFramework("zio.test.sbt.ZTestFramework"))
   )
